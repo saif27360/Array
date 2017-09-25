@@ -1,0 +1,66 @@
+#include<stdio.h>
+
+int main()
+{
+    int i=0,j=0,x,y,d,k=0,n=4,m=3,c[10];
+    int a[5]={10,20,25,30,32};
+    int b[4]={1,35,40,50};
+    while((i<=n) && (j<=m))
+    {
+
+        if (a[i]<b[j])
+        {
+            c[k]=a[i];
+            i=i+1;
+        }
+        else
+        {
+            c[k]=b[j];
+            j=j+1;
+        }
+        k=k+1;
+    }
+    if (i==(n+1))
+    {
+        for(x=j;x<=m;x++)
+        {
+
+            c[k]=b[x];
+
+
+        k=k+1;
+        }
+    }
+        else
+        {
+            for(y=i;y<=n;y++){
+                c[k]=a[y];
+
+            k=k+1;
+            }
+        }
+        printf("Array sorting : \n");
+        for(d=0;d<(m+n+2);d++)
+        {
+            printf("\n%d  ",c[d]);
+        }
+
+     return 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
